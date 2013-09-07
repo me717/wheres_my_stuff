@@ -1,0 +1,67 @@
+<!--M4 Ant file-->
+<!--amorlan3.xml-->
+<project name ="M4" basedir="." default="all">
+	<target name="init">
+		<property name="src.dir" value="src"/>
+		<property name="lib.dir" value="lib"/>
+		<property name="build.dir" value="build"/>
+		<property name="apidoc.dir" value="apidoc"/>
+		<property name="classes.dir" value="${build.dir}"/>
+		<property name="main-class" value="${src.dir}/edu.gatech.oad.antlab.pkg1/AntLabMain"/>
+	</target>
+	
+	<target name="prepare">
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${apidoc.dir}"/>
+	</target>
+
+	<target name="compile" depends="prepare">
+		<javac destdir="${classes.dir}" includeantruntime="true">
+			<src path ="${src.dir}"/>
+			<classpath>
+				<pathelement path="${build.dir}"/>
+				<pathelement path="${lib.dir}/resources.jar"/>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="javadoc" depends="compile">
+		<javadoc sourcepath="${src.dir}" access="public" destdir="${apidoc.dir}/javadoc" packagenames="edu.gatech.oad.antlab">
+			<fileset dir="${src.dir}">
+				<include name="**/*.java"/>
+			</fileset>
+			<classpath>
+				<pathelement path="${build.dir}"/>
+				<pathelement path="${lib.dir}/resources.jar"/>
+			</classpath>
+			<bottom>
+				<![CDATA[<i>Copyright &#169; 2011 Team 15 CS2340. All Rights Reserved.</i>]]>
+			</bottom>
+		</javadoc>
+	</target>
+	<target name="jar" depends="javadoc">
+		<jar destfile="AntLabRun.jar" basedir="${build.dir}" >
+			<manifest>
+				<attribute name="Main-Class" value="edu.gatech.oad.antlab.pkg1.AntLabMain"/>
+				<attribute name="Class-Path" value="${lib.dir}/resources.jar" />
+			</manifest>
+		</jar>
+	</target>
+	
+	<target name="run" depends="jar">
+		<java jar="AntLabRun.jar" fork="true">
+			<classpath>
+				<pathelement path="${build.dir}"/>
+				<pathelement path="${lib.dir}/resources.jar"/>
+			</classpath>
+		</java>
+	</target>
+
+	<target name="all" depends="init, prepare, compile, javadoc, jar, run"/>
+
+<target name="clean" depends="init">
+		<delete dir="${build.dir}"/>
+		<delete dir="${apidoc.dir}"/>
+		<delete file="AntLabRun.jar"/>
+	</target>
+</project>

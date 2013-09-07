@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/item_entry_bg"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+	
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:padding="1dp"
+        android:background="@drawable/item_entry_image_bg">
+        
+        <!-- SRC image wil be item image, ID must change -->
+    	<ImageView
+	        android:id="@+id/itemImage"
+	        android:layout_width="50dp"
+	        android:layout_height="50dp"
+	        android:src="@drawable/ic_launcher" />
+    	
+    </LinearLayout>
+	
+    <!-- Text = status of item ("Lost" or "Found"), ID needs to change -->
+    <TextView
+        android:id="@+id/itemStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/thumbnail"
+        android:layout_alignRight="@+id/thumbnail"
+        android:layout_below="@+id/thumbnail"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:text="Lost" />
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_marginLeft="15dp"
+        android:textColor="#000000"
+        android:text="Name of Item" />
+
+    <TextView
+        android:id="@+id/itemDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/itemTitle"
+        android:layout_below="@+id/itemTitle"
+        android:text="&quot;Description of item&quot;" />
+
+    <TextView
+        android:id="@+id/itemLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemDescription"
+        android:layout_alignLeft="@+id/itemDescription"
+        android:text="Atlanta,GA  30024" />
+
+    <TextView
+        android:id="@+id/itemDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/itemLocation"
+        android:layout_below="@+id/itemLocation"
+        android:text="Feb 27, 2013" />
+
+    <TextView
+        android:id="@+id/itemCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/itemTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/itemTitle"
+        android:textSize="10sp"
+        android:text="Category1, Category2..." />
+
+</RelativeLayout>

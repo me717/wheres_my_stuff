@@ -1,0 +1,340 @@
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".FilterActivity" >
+
+        <TextView
+            android:id="@+id/searchTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/search"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/enterSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/searchTextView"
+            android:layout_alignBottom="@+id/searchTextView"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/searchTextView"
+            android:ems="10"
+            android:inputType="textMultiLine" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/filterTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/searchTextView"
+            android:layout_below="@+id/enterSearch"
+            android:layout_marginTop="16dp"
+            android:text="@string/filter"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/categoryTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/filterTitleTextView"
+            android:layout_below="@+id/filterTitleTextView"
+            android:text="@string/category"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <CheckBox
+            android:id="@+id/filterCheckBoxAntiques"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/categoryTitleTextView"
+            android:layout_below="@+id/categoryTitleTextView"
+            android:layout_marginTop="15dp"
+            android:checked="true"
+            android:text="@string/antiques" />
+
+        <CheckBox
+            android:id="@+id/filterCheckBoxJewelry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/filterCheckBoxAntiques"
+            android:layout_below="@+id/filterCheckBoxAntiques"
+            android:checked="true"
+            android:text="@string/jewelry" />
+
+        <CheckBox
+            android:id="@+id/filterCheckBoxMem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/filterCheckBoxAntiques"
+            android:layout_alignBottom="@+id/filterCheckBoxAntiques"
+            android:layout_marginLeft="22dp"
+            android:checked="true"
+            android:layout_toRightOf="@+id/filterCheckBoxAntiques"
+            android:text="@string/memorabilia" />
+
+        <CheckBox
+            android:id="@+id/filterCheckBoxOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/filterCheckBoxJewelry"
+            android:layout_alignBottom="@+id/filterCheckBoxJewelry"
+            android:layout_alignLeft="@+id/filterCheckBoxMem"
+            android:checked="true"
+            android:text="@string/other" />
+
+        <TextView
+            android:id="@+id/earliestDateLostOrFoundTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/filterCheckBoxJewelry"
+            android:layout_below="@+id/filterCheckBoxJewelry"
+            android:layout_marginTop="16dp"
+            android:text="@string/earliestdate"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/firstSlashTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/enterBeginMonth"
+            android:layout_toRightOf="@+id/enterBeginMonth"
+            android:text="@string/slash"
+            android:textAppearance="?android:attr/textAppearanceLarge" /><EditText android:id="@+id/enterBeginMonth" android:layout_width="65dp" android:layout_height="wrap_content" android:layout_alignLeft="@+id/dateFormatEarlierTextView" android:layout_below="@+id/dateFormatEarlierTextView" android:layout_marginTop="14dp" android:ems="10" android:inputType="number" />
+
+        <EditText
+            android:id="@+id/enterBeginDay"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/firstSlashTextView"
+            android:layout_toRightOf="@+id/firstSlashTextView"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/secondSlashTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/enterBeginDay"
+            android:layout_toRightOf="@+id/enterBeginDay"
+            android:text="@string/slash"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/enterBeginYear"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/secondSlashTextView"
+            android:layout_toRightOf="@+id/secondSlashTextView"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/latestDateLostOrFoundTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/enterBeginMonth"
+            android:layout_below="@+id/enterBeginMonth"
+            android:layout_marginTop="21dp"
+            android:text="@string/latestDateLostOrFound"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/dateFormatLatestTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/latestDateLostOrFoundTextView"
+            android:layout_below="@+id/latestDateLostOrFoundTextView"
+            android:text="@string/monthdayyear"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/dateFormatEarlierTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/earliestDateLostOrFoundTextView"
+            android:layout_below="@+id/earliestDateLostOrFoundTextView"
+            android:text="@string/monthdayyear"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        
+
+        <EditText
+            android:id="@+id/enterLastMonth"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dateFormatLatestTextView"
+            android:layout_below="@+id/dateFormatLatestTextView"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/firstSlashPostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/enterLastMonth"
+            android:layout_toRightOf="@+id/enterLastMonth"
+            android:text="@string/slash"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/enterLastDay"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/firstSlashPostTextView"
+            android:layout_toRightOf="@+id/firstSlashPostTextView"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/secondSlashPostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/firstSlashPostTextView"
+            android:layout_alignBottom="@+id/firstSlashPostTextView"
+            android:layout_toRightOf="@+id/enterLastDay"
+            android:text="@string/slash"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/enterLastYear"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/secondSlashPostTextView"
+            android:layout_toRightOf="@+id/secondSlashPostTextView"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/minRewardTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/enterLastMonth"
+            android:layout_below="@+id/enterLastMonth"
+            android:layout_marginTop="24dp"
+            android:text="@string/minReward"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/maxRewardTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/minRewardTextView"
+            android:layout_toRightOf="@+id/minRewardTextView"
+            android:text="@string/maxReward"
+            android:layout_marginLeft="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/minReward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/minRewardTextView"
+            android:layout_below="@+id/minRewardTextView"
+            android:layout_toLeftOf="@+id/maxRewardTextView"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/maxReward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/maxRewardTextView"
+            android:layout_alignRight="@+id/maxRewardTextView"
+            android:layout_below="@+id/maxRewardTextView"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <CheckBox
+            android:id="@+id/filterCheckBoxLost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/minReward"
+            android:layout_below="@+id/minReward"
+            android:checked="true"
+            android:layout_marginTop="27dp"
+            android:text="@string/lost" />
+
+        <CheckBox
+            android:id="@+id/filterCheckBoxFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/filterCheckBoxLost"
+            android:layout_alignBottom="@+id/filterCheckBoxLost"
+            android:layout_toRightOf="@+id/filterCheckBoxLost"
+            android:layout_marginLeft="20dp"
+            android:checked="true"
+            android:text="@string/found" />
+
+        <TextView
+            android:id="@+id/filterCityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/filterCheckBoxLost"
+            android:layout_below="@+id/filterCheckBoxLost"
+            android:layout_marginTop="20dp"
+            android:text="@string/city"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/enterFilterCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/filterCityTextView"
+            android:layout_alignBottom="@+id/filterCityTextView"
+            android:layout_toRightOf="@+id/filterCityTextView"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/filterStateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/filterCityTextView"
+            android:layout_below="@+id/enterFilterCity"
+            android:layout_marginTop="28dp"
+            android:text="@string/state"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/enterFilterState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/filterStateTextView"
+            android:layout_alignBottom="@+id/filterStateTextView"
+            android:layout_toRightOf="@+id/filterStateTextView"
+            android:ems="10" />
+
+        <Button
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/cancelFilterButton"
+            android:layout_alignBottom="@+id/cancelFilterButton"
+            android:layout_alignRight="@+id/enterFilterCity"
+            android:text="@string/filter" />
+
+        <Button
+            android:id="@+id/cancelFilterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/filterStateTextView"
+            android:layout_below="@+id/enterFilterState"
+            android:layout_marginTop="36dp"
+            android:text="@string/cancel" />
+        
+    </RelativeLayout>
+
+</ScrollView>

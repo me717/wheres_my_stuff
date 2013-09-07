@@ -1,0 +1,188 @@
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="485dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".RegisterActivity" >
+
+    <TextView
+        android:id="@+id/EmailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/NameTextView"
+        android:layout_marginTop="16dp"
+        android:text="@string/RegistrationEmail"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/passwrodTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/EmailTextView"
+        android:layout_below="@+id/EmailTextView"
+        android:layout_marginTop="16dp"
+        android:text="@string/RegistrationPassword"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/confirmPasswordTextView"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/EmailTextView"
+        android:layout_below="@+id/passwrodTextView"
+        android:layout_marginTop="16dp"
+        android:text="@string/RegistrationConfirmPassword"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/DOBTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/EmailTextView"
+        android:layout_below="@+id/confirmPasswordTextView"
+        android:layout_marginTop="16dp"
+        android:text="@string/RegistrationDOB"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/enterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/NameTextView"
+        android:layout_toRightOf="@+id/confirmPasswordTextView"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    
+    <EditText
+        android:id="@+id/enterEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/EmailTextView"
+        android:layout_alignLeft="@+id/enterName"
+        android:layout_alignRight="@+id/enterName"
+        android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/enterPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/passwrodTextView"
+        android:layout_alignLeft="@+id/enterName"
+        android:layout_alignRight="@+id/enterName"
+        android:inputType="textPassword" />
+    
+    
+    <EditText
+        android:id="@+id/enterConfirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/enterName"
+        android:layout_alignRight="@+id/enterName"
+        android:layout_alignBaseline="@+id/confirmPasswordTextView"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/NameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/EmailTextView"
+        android:layout_marginTop="15dp"
+        android:text="@string/RegistrationName"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/firstSlashRegistertextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/enterMonth"
+            android:layout_toRightOf="@+id/enterMonth"
+            android:text="@string/slash"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/enterDay"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/firstSlashRegistertextView"
+            android:layout_toRightOf="@+id/firstSlashRegistertextView"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/DOBExampleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/DOBTextView"
+            android:layout_below="@+id/DOBTextView"
+            android:text="@string/RegistrationDateFormatExample"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/enterMonth"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/DOBExampleTextView"
+            android:layout_below="@+id/DOBExampleTextView"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="number" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/secondSlashRegistrationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/enterDay"
+            android:layout_toRightOf="@+id/enterDay"
+            android:text="@string/slash"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/enterYear"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/secondSlashRegistrationTextView"
+            android:layout_toRightOf="@+id/secondSlashRegistrationTextView"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/conditionsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/enterMonth"
+            android:layout_below="@+id/firstSlashRegistertextView"
+            android:layout_marginTop="16dp"
+            android:text="@string/RegistrationTermsAndConditions"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <CheckBox
+            android:id="@+id/IAgreeRegistrationCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/conditionsTextView"
+            android:layout_below="@+id/conditionsTextView"
+            android:text="@string/RegistrationAgee" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IAgreeRegistrationCheckBox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:onClick="registerUser"
+            android:text="@string/Register" />
+
+</RelativeLayout>
+</ScrollView>

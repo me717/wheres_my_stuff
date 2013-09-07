@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/254/trunk/Wheres%20My%20Stuff/src/edu/gatech/num1matches/model
+END
+RemoteUserAccount.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/254/trunk/Wheres%20My%20Stuff/src/edu/gatech/num1matches/model/RemoteUserAccount.java
+END
+ContactInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/254/trunk/Wheres%20My%20Stuff/src/edu/gatech/num1matches/model/ContactInfo.java
+END
+Location.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/254/trunk/Wheres%20My%20Stuff/src/edu/gatech/num1matches/model/Location.java
+END
+UserAccount.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/254/trunk/Wheres%20My%20Stuff/src/edu/gatech/num1matches/model/UserAccount.java
+END
+ExternalNetwork.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/254/trunk/Wheres%20My%20Stuff/src/edu/gatech/num1matches/model/ExternalNetwork.java
+END
+Category.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/254/trunk/Wheres%20My%20Stuff/src/edu/gatech/num1matches/model/Category.java
+END
+Item.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/254/trunk/Wheres%20My%20Stuff/src/edu/gatech/num1matches/model/Item.java
+END
+RemoteAdminAccount.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/254/trunk/Wheres%20My%20Stuff/src/edu/gatech/num1matches/model/RemoteAdminAccount.java
+END
+PersistentStorage.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/254/trunk/Wheres%20My%20Stuff/src/edu/gatech/num1matches/model/PersistentStorage.java
+END
+AdminAccount.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/254/trunk/Wheres%20My%20Stuff/src/edu/gatech/num1matches/model/AdminAccount.java
+END
+Filter.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/254/trunk/Wheres%20My%20Stuff/src/edu/gatech/num1matches/model/Filter.java
+END

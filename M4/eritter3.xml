@@ -1,0 +1,58 @@
+<!-- Ant hello world -->
+<!-- build.xml -->
+
+<project name="HelloWorld" basedir="." default="all">
+	
+	<target name="init">
+		<property name="src.dir" value="src"/>
+		<property name="build.dir" value="build"/>
+		<property name="api.dir" value="apidoc"/>
+		<property name="lib.dir" value="lib"/>
+		<property name="res.dir" value="${lib.dir}/resources.jar"/>
+	</target>
+	
+	<target name="prepare" depends="init">
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${api.dir}"/>
+	</target>
+	
+	<target name="compile" depends="prepare">
+		<javac srcdir="${src.dir}" destdir="${build.dir}" classpath="${res.dir}"/>
+	</target>
+	
+	<target name="javadoc" depends="compile">
+		<javadoc sourcepath="${src.dir}" access="public" destdir="${apidoc}"
+		packagenames="edu.gatech.oad.antlab" classpath="${res.dir}">
+			<fileset dir="${src.dir}">
+				<include name="**/*.java"/>
+			</fileset>
+		<bottom>
+			<![CDATA[<i>Copyright &#169; 2011 Team 15 CS2340. All Rights Reserved.</i>]]>
+		</bottom>
+		</javadoc>
+	</target>
+	
+	<target name="jar" depends="javadoc">
+		<jar destfile="AntLab.jar" basedir="${build.dir}">
+				<manifest>
+					<attribute name="Main-Class" value="edu.gatech.oad.antlab.pkg1.AntLabMain"/>
+					<attribute name="Class-Path" value="${res.dir}" />
+				</manifest>
+		</jar>
+	</target>
+	
+	<target name="run" depends="jar">
+		<java jar="AntLab.jar" fork="true" classpath="${build.dir}"/>
+	</target>	
+	
+	<target name="all" depends="run">
+	</target>
+		
+	
+	<target name="clean" depends="init">
+		<delete dir="${build.dir}"/>
+		<delete dir="${api.dir}"/>
+		<delete file="AntLab.jar"/>
+	</target>
+	
+</project>

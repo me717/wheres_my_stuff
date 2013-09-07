@@ -1,0 +1,64 @@
+<!-- M4 Ant File -->
+<!-- by Andrew Dehn -->
+<!-- build.xml -->
+<project name="M4" basedir="." default="all">
+    
+    <target name="init">
+        <property name="src.dir" value="src"/>
+        <property name="lib.dir" value="lib/resources.jar"/>
+		<property name="build.dir" value="build"/>
+		<property name="apidocs.dir" value="apidocs"/>
+		<property name="jarfile" value="AntLabRun.jar"/>
+		<property name="main-class" value="${src.dir}/edu.gatech.oad.antlab.pkg1/AntLabMain"/>
+    </target>
+    
+    <target name="prepare" depends="init">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${apidocs.dir}"/>
+    </target>
+    
+    <target name="compile" depends="prepare">
+		<javac srcdir="${src.dir}" destdir="${build.dir}" classpath="${lib.dir}"/>
+	</target>
+	
+    <target name="javadoc" depends="prepare">
+	    <javadoc sourcepath="${src.dir}" access="public" destdir="${apidocs.dir}" 
+            packagenames="edu.gatech.oad.antlab" classpath="${lib.dir}">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </javadoc>
+	</target>
+	
+    <target name="jar" depends="compile">
+        <jar destfile="${jarfile}" basedir="${build.dir}">
+            <manifest>
+            	<attribute name="Main-Class" value="edu.gatech.oad.antlab.pkg1.AntLabMain"/>
+                <attribute name="Class-Path" value="${lib.dir}"/>
+            </manifest>
+        </jar>
+    </target>
+    
+    <target name="run" depends="jar">
+        <java jar="${jarfile}" fork="true">
+            <classpath>
+                <pathelement location="${build.dir}"/>
+            </classpath>
+        </java>
+    </target>
+
+	<target name="clean" depends="init">
+		<delete dir="${build.dir}"/>
+		<delete dir="${apidocs.dir}"/>
+		<delete file="${jarfile}"/>
+	</target>
+	
+	<target name="all" depends="javadoc, run">
+    </target>
+	
+	
+	
+	
+	
+	
+</project>

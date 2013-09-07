@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Where\'s My Stuff</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="loginEmail">Email</string>
+    <string name="matchesTitle">Where\'s My Stuff</string>
+    <string name="loginPassword">Password</string>
+    <string name="RegistrationEmail">Email: </string>
+    <string name="RegistrationName">"Name: "</string>
+    <string name="RegistrationPassword">"Password: "</string>
+    <string name="RegistrationConfirmPassword">"Confirm Password: "</string>
+    <string name="RegistrationDOB">"Date of Birth: "</string>
+    <string name="RegistrationTermsAndConditions">This daslkgbkhjsl erdfhvcwef vd fdnfv erdfjd ewdsfkerjd fciesd ficdf xcfirc sdif ersdif aerki soul sold djkfs rgjdfk jikerg.</string>
+    <string name="Register">Register</string>
+    <string name="RegistrationAgee">I Agree</string>
+    <string name="RegistrationMonth">Month</string>
+    <string name="RegistrationDay">Day</string>
+    <string name="RegistrationYear">Year</string>
+    <string name="RegistrationDateFormatExample">mm/dd/yyyy</string>
+    <string name="RegistrationSlash">/</string>
+    <string name="Browse">Browse</string>
+    <string name="Post">Post</string>
+    <string name="title_activity_item_view">ItemViewActivity</string>
+    <string name="lost">Lost</string>
+    <string name="found">Found</string>
+    <string name="name">Name</string>
+    <string name="picture">Picture</string>
+    <string name="description">Description</string>
+    <string name="antiques">Antiques</string>
+    <string name="jewelry">Jewelry</string>
+    <string name="memorabilia">Memorabilia</string>
+    <string name="other">Other</string>
+    <string name="location">Location</string>
+    <string name="dateLostOrFound">Date Lost or Found</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="zip">Zip Code</string>
+    <string name="month">Month   </string>
+    <string name="day">Day   </string>
+    <string name="year">Year   </string>
+    <string name="viewUsers">Users</string>
+    <string name="blockUserText">Block</string>
+    <string name="unblockUserText">Unblock</string>
+    <string name="title_activity_user_view">UserListView</string>
+    <string name="promoteUserText">Promote</string>
+    <string name="removeUserText">Remove</string>
+    <string name="title_activity_filter">FilterActivity</string>
+    <string name="Search">search</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+    <string name="category">Category</string>
+    <string name="earliest">Earliest</string>
+    <string name="earliestdate">Earliest Date Lost/Found</string>
+    <string name="monthdayyear">mm/dd/yyyy</string>
+    <string name="slash">/</string>
+    <string name="latestDateLostOrFound">Latest Date Lost/Found</string>
+	<string name="minReward">Min Reward</string>
+	<string name="maxReward">Max Reward</string>
+	<string name="logout">Logout</string>
+	<string name="home">Home</string>    
+
+
+</resources>
